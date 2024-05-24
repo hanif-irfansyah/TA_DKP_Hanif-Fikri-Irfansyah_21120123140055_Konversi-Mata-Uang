@@ -50,15 +50,6 @@ class Konverter:
         'Euro': {'Indonesia': 16000, 'Amerika Serikat': 1.1, 'Arab Saudi': 4.1, 'Jepang': 126, 'Korea Selatan': 1330, 'Ponsterling': 0.86},
         'Ponsterling': {'Indonesia': 18600, 'Amerika Serikat': 1.28, 'Arab Saudi': 4.77, 'Jepang': 147, 'Korea Selatan': 1550, 'Euro': 1.16}
     }
-    negara = {
-        'IDR': 'Indonesia',
-        'USD': 'Amerika Serikat',
-        'SAR': 'Arab Saudi',
-        'JPY': 'Jepang',
-        'KRW': 'Korea Selatan',
-        'EUR': 'Euro',
-        'GBP': 'Ponsterling'
-    }
     
     def konversi(self, dari, ke, jumlah):
         return jumlah * self.nilai_tukar[dari][ke]
