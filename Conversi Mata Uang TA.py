@@ -42,7 +42,7 @@ class Queue:
 # Modul 6 (OOP 2, Encapsulation), Modul 4 (Method) Modul 1 (Tipe Data Dan Variabel)
 class Konverter:
     nilai_tukar = {
-        'Indonesia': {'Amerika Serikat': 0.000069, 'Arab Saudi': 0.00026, 'Jepang': 0.0079, 'Korea Selatan': 0.083, 'Euro': 0.000063, 'Ponsterling': 0.000054},
+        'Indonesia': {'Amerika Serikat': 0.000063, 'Arab Saudi': 0.000235, 'Jepang': 0.009816, 'Korea Selatan': 0.08541, 'Euro': 0.000058, 'Ponsterling': 0.000049},
         'Amerika Serikat': {'Indonesia': 15000, 'Arab Saudi': 3.75, 'Jepang': 114, 'Korea Selatan': 1200, 'Euro': 0.91, 'Ponsterling': 0.78},
         'Arab Saudi': {'Indonesia': 3850, 'Amerika Serikat': 0.27, 'Jepang': 30.4, 'Korea Selatan': 320, 'Euro': 0.24, 'Ponsterling': 0.21},
         'Jepang': {'Indonesia': 127, 'Amerika Serikat': 0.0088, 'Arab Saudi': 0.033, 'Korea Selatan': 10.5, 'Euro': 0.0079, 'Ponsterling': 0.0068},
@@ -60,6 +60,7 @@ class App:
         self.konverter = Konverter()
         self.root = root
         self.root.title("Konverter Mata Uang")
+        self.root.geometry("300x200")
 
         self.frame = ttk.Frame(self.root, padding="3 3 12 12")
         self.frame.grid(column=0, row=0, sticky=(tk.W, tk.E, tk.N, tk.S))
