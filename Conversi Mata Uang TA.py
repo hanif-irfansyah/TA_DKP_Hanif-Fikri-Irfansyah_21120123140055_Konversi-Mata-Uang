@@ -9,36 +9,6 @@ class MataUang:
         self.nilai = nilai
         self.negara = negara
 
-# Modul 7 (Stack) dan Modul 4 (Method)
-class Stack:
-    def __init__(self):
-        self.items = []
-
-    def push(self, item):
-        self.items.append(item)
-
-    def pop(self):
-        if not self.is_empty():
-            return self.items.pop()
-
-    def is_empty(self):
-        return len(self.items) == 0
-
-# Modul 7 (Queue) dan Modul 4 (Method)
-class Queue:
-    def __init__(self):
-        self.items = []
-
-    def enqueue(self, item):
-        self.items.append(item)
-    # Modul 2 (Pengkondisian)
-    def dequeue(self):
-        if not self.is_empty():
-            return self.items.pop(0)
-    # Modul 2 (Pengkondisian)
-    def is_empty(self):
-        return len(self.items) == 0
-
 # Modul 6 (OOP 2, Encapsulation), Modul 4 (Method) Modul 1 (Tipe Data Dan Variabel)
 class Konverter:
     nilai_tukar = {
@@ -81,43 +51,33 @@ class App:
         ttk.Button(self.frame, text="Konversi", command=self.konversi).grid(column=2, row=4)
         ttk.Label(self.frame, text="Hasil:").grid(column=1, row=5, sticky=tk.W)
         ttk.Entry(self.frame, textvariable=self.hasil_var, state='readonly').grid(column=2, row=5)
-
-        # Modul 7 (Stack)
-        self.stack = Stack()
-        self.stack.push('Item 1')
-        self.stack.push('Item 2')
-        print(self.stack.pop())  # Output: Item 2
-
-        # Modul 7 (Queue)
-        self.queue = Queue()
-        self.queue.enqueue('Item 1')
-        self.queue.enqueue('Item 2')
-        print(self.queue.dequeue())  # Output: Item 1
         
     # Modul 4 (Method) dan Modul 1 (Tipe Data Dan Variabel)
     def konversi(self):
-        dari = self.dari_var.get()
-        ke = self.ke_var.get()
-        jumlah = self.jumlah_var.get()
-        hasil = self.konverter.konversi(dari, ke, jumlah)
-        simbol = {
-            'Indonesia': 'Rp',
-            'Amerika Serikat': '$',
-            'Arab Saudi': 'SR',
-            'Jepang': '¥',
-            'Korea Selatan': '₩',
-            'Euro': '€',
-            'Ponsterling': '£'
-        }
-        self.hasil_var.set(f"{simbol[ke]} {hasil:.2f}")
+        while True :
+            dari = self.dari_var.get()
+            ke = self.ke_var.get()
+            jumlah = self.jumlah_var.get()
+            hasil = self.konverter.konversi(dari, ke, jumlah)
+            simbol = {
+                'Indonesia': 'Rp',
+                'Amerika Serikat': '$',
+                'Arab Saudi': 'SR',
+                'Jepang': '¥',
+                'Korea Selatan': '₩',
+                'Euro': '€',
+                'Ponsterling': '£'
+            }
+            self.hasil_var.set(f"{simbol[ke]} {hasil:.2f}")
 
-        # Modul 2 (Pengkondisian)
-        lagi = messagebox.askyesno("Konversi Lagi", "Apakah ingin mengkonversi mata uang lagi?")
-        if lagi:
-            self.reset_fields()
-        else:
-            self.root.quit()
-
+            # Modul 2 (Pengkondisian)
+            lagi = messagebox.askyesno("Konversi Lagi", "Apakah ingin mengkonversi mata uang lagi?")
+            if lagi:
+                self.reset_fields()
+            else:
+                self.root.quit()
+            break
+    
     def reset_fields(self):
             self.dari_var.set('')
             self.ke_var.set('')
