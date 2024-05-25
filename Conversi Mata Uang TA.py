@@ -12,13 +12,13 @@ class MataUang:
 # Modul 6 (OOP 2, Encapsulation), Modul 4 (Method) Modul 1 (Tipe Data Dan Variabel)
 class Konverter:
     nilai_tukar = {
-        'Indonesia': {'Amerika Serikat': 0.000063, 'Arab Saudi': 0.000235, 'Jepang': 0.009816, 'Korea Selatan': 0.08541, 'Euro': 0.000058, 'Ponsterling': 0.000049},
-        'Amerika Serikat': {'Indonesia': 15000, 'Arab Saudi': 3.75, 'Jepang': 114, 'Korea Selatan': 1200, 'Euro': 0.91, 'Ponsterling': 0.78},
-        'Arab Saudi': {'Indonesia': 3850, 'Amerika Serikat': 0.27, 'Jepang': 30.4, 'Korea Selatan': 320, 'Euro': 0.24, 'Ponsterling': 0.21},
-        'Jepang': {'Indonesia': 127, 'Amerika Serikat': 0.0088, 'Arab Saudi': 0.033, 'Korea Selatan': 10.5, 'Euro': 0.0079, 'Ponsterling': 0.0068},
-        'Korea Selatan': {'Indonesia': 12.1, 'Amerika Serikat': 0.00083, 'Arab Saudi': 0.0031, 'Jepang': 0.095, 'Euro': 0.00075, 'Ponsterling': 0.00065},
-        'Euro': {'Indonesia': 16000, 'Amerika Serikat': 1.1, 'Arab Saudi': 4.1, 'Jepang': 126, 'Korea Selatan': 1330, 'Ponsterling': 0.86},
-        'Ponsterling': {'Indonesia': 18600, 'Amerika Serikat': 1.28, 'Arab Saudi': 4.77, 'Jepang': 147, 'Korea Selatan': 1550, 'Euro': 1.16}
+        'Indonesia': {'Amerika Serikat': 0.000063, 'Arab Saudi': 0.000235, 'Jepang': 0.009816, 'Korea Selatan': 0.08541, 'Euro': 0.000058, 'Ponsterling': 0.000049, 'Indonesia' : 1.00 },
+        'Amerika Serikat': {'Indonesia': 15000, 'Arab Saudi': 3.75, 'Jepang': 114, 'Korea Selatan': 1200, 'Euro': 0.91, 'Ponsterling': 0.78, 'Amerika Serikat': 1.00},
+        'Arab Saudi': {'Indonesia': 3850, 'Amerika Serikat': 0.27, 'Jepang': 30.4, 'Korea Selatan': 320, 'Euro': 0.24, 'Ponsterling': 0.21, 'Arab Saudi': 1.00},
+        'Jepang': {'Indonesia': 127, 'Amerika Serikat': 0.0088, 'Arab Saudi': 0.033, 'Korea Selatan': 10.5, 'Euro': 0.0079, 'Ponsterling': 0.0068, 'Jepang': 1.00},
+        'Korea Selatan': {'Indonesia': 12.1, 'Amerika Serikat': 0.00083, 'Arab Saudi': 0.0031, 'Jepang': 0.095, 'Euro': 0.00075, 'Ponsterling': 0.00065, 'Korea Selatan': 1.00},
+        'Euro': {'Indonesia': 16000, 'Amerika Serikat': 1.1, 'Arab Saudi': 4.1, 'Jepang': 126, 'Korea Selatan': 1330, 'Ponsterling': 0.86, 'Euro': 1.00},
+        'Ponsterling': {'Indonesia': 18600, 'Amerika Serikat': 1.28, 'Arab Saudi': 4.77, 'Jepang': 147, 'Korea Selatan': 1550, 'Euro': 1.16, 'Ponsterling': 1.00}
     }
     
     def konversi(self, dari, ke, jumlah):
